@@ -1,0 +1,11 @@
+# Rust build artifacts
+target/
+
+# Wasm binaries
+wasm/*.wasm
+
+# Python virtual environments
+venv/
+
+# Docker-related files
+.dockerignore
