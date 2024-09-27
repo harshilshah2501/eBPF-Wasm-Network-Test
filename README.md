@@ -83,7 +83,7 @@ Run the Docker container with privileged access (required for eBPF).
 sudo docker run --privileged --rm wasm-ebpf-container
 ```
 
-**Running the Project**
+## Running the Project
 Once the Docker container is up and running, you can trigger various network tests (ping, traceroute, iperf) via the WebAssembly module, and the eBPF program will collect statistics on the network activity.
 
 1. **Choose a Network Test**:
@@ -97,7 +97,7 @@ If using a script, you can create a simple bash script (scripts/run_tests.sh) to
 echo "Running Ping Test"
 curl https://example.com
 ```
-**Network Test Types**
+## Network Test Types
 
 The following network tests can be run via the WebAssembly module:
 
@@ -113,7 +113,7 @@ The following network tests can be run via the WebAssembly module:
 •  Measures the **bandwidth** between two systems.
 •  eBPF tracks the bandwidth usage during the iperf test.
 
-**Expected Output**
+## Expected Output
 When running the project, you should see the following types of output:
 1. **WebAssembly**: Outputs the test result header, e.g., Running Ping Test....
 2. **eBPF**: Prints detailed information about the network test, such as:
@@ -121,16 +121,16 @@ When running the project, you should see the following types of output:
 •  **Traceroute**: Hop 1: 10ms, Hop 2: 15ms, Hop 3: 30ms
 •  **Iperf**: Bandwidth: 100Mbps
 
-**Example Output:**
+## Example Output
 ```bash
 Hello from WebAssembly!
 Tracing network packets... Press Ctrl+C to stop.
 Packet caught! Average RTT: 20ms
 Packet caught! Average RTT: 22ms
 ```
-**License**
+## License
 This project is licensed under the **MIT License**. Feel free to use it as you like, but please provide proper attribution.
 
-**Additional Notes**
+## Additional Notes
 •  This project currently uses **Python’s BCC (BPF Compiler Collection)** to monitor network tests via eBPF. You can extend the project by integrating additional network tools or metrics.
 •  Future improvements could include adding a UI layer for ease of use and visualizing the network test results.
