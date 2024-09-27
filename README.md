@@ -1,0 +1,2 @@
+# eBPF-Wasm-Network-Test
+ This project combines WebAssembly (Wasm), eBPF, and Docker to create a system for monitoring network activities such as ping, traceroute, and iperf. The WebAssembly module handles the user’s network test requests, while eBPF traces the relevant system calls to gather metrics, such as average round-trip time (RTT), packet loss, and bandwidth. Docker provides a containerized environment for running the project.
